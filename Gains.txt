@@ -1,0 +1,2 @@
+Pre-Amp;Low-Pass;Amplitude-Detector
+100;2;5
