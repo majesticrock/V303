@@ -1,17 +1,17 @@
-all: protokoll.pdf
+all: build/protokoll.pdf
 
 build/plot_phase.pdf: plot1.py phasenverschiebung.csv header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python plot1.py
 
-build/plot_phase_rauschen.pdf: plot2.py phasenverschiebung.csvheader-matplotlib.tex | build
+build/plot_phase_rauschen.pdf: plot2.py phasenverschiebung.csv header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python plot2.py
 
 build/plot_intensity: plot3.py photo.csvheader-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python plot3.py
 
-build/main.pdf: build/plot_phase.pdf build/plot_phase_rauschen build/plot_intensity
+build/protokoll.pdf: build/plot_phase.pdf build/plot_phase_rauschen.pdf build/plot_intensity.pdf
 
-build/main.pdf: FORCE | build
+build/protokoll.pdf: FORCE | build
 	  TEXINPUTS=build: \
 	  BIBINPUTS=build: \
 	  max_print_line=1048576 \
@@ -27,5 +27,7 @@ build:
 
 clean:
 	rm -rf build/*
+
+FORCE:
 
 .PHONY: all clean
