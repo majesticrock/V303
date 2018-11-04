@@ -1,5 +1,69 @@
 \section{Auswertung}
+\subsection{Messung von verrauschten und unverrauschten Signalen}
 \label{sec:Auswertung}
+
+Zunächst wurde die konstate Spannung des Funktionsgenerators gemessen. Diese wird von dem Oscillator-Ausgang bereitgestellt und beträgt $U_\text{const} = 3.2$V\!. Der Reference-Ausgang liefert eine variable Spannungsamplitude $U_\text{ref}$.
+Die Frequenzen sind jeweils einstellbar.
+
+Entgegen der Erwartung ändert sich beim Ändern der Phase mithilfe des Phasenverschiebers (Phase Shifter) auch die am Oscillator-Ausgang gemessene Spannung.
+%Gleichungsreferenz hinzufügen
+Die Phasenverschiebung der beiden Signale lässt sich mithilfe von Python auf circa 45° bestimmen. Mit dieser Information und GLEICHUNG! (5) lässt sich nun auch $U_\text{out}$ berechnen.
+Diese beiden sind in den foglenden beiden Messwerttabellen gegeneinander aufgeführt.
+%Größenordnungen der Messwerte überprüfen
+\input{../content/tabelle1.tex}
+
+$\Delta\phi$ beschreibt hier bei die am Phasenverschieber eingestellte Phasenverschiebung zwischen dem Oscillator- und dem Reference-Signal und $U_\text{out} / V$ beschreibt die am
+Low-Pass-Filter gemessene Spannung. Am Oszilloskop wurden folgende Graphen aufgenommen:
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{content/0deg.png}
+    \caption{$\Delta\phi = 0°$}
+    \label{fig:0-deg}
+  \end{subfigure}
+  \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{content/45deg.png}
+    \caption{$\Delta\phi = 45°$}
+    \label{fig:45-deg}
+  \end{subfigure}
+  \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{content/45deg.png}
+    \caption{$\Delta\phi = 90°$}
+    \label{fig:90-deg}
+  \end{subfigure}
+
+  \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{content/135deg.png}
+    \caption{$\Delta\phi = 135°$}
+    \label{fig:135-deg}
+  \end{subfigure}
+  \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{content/180deg.png}
+    \caption{$\Delta\phi = 180°$}
+    \label{fig:180-deg}
+  \end{subfigure}
+  \begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=0.95\textwidth]{content/270deg.png}
+    \caption{$\Delta\phi = 270°$}
+    \label{fig:270-deg}
+  \end{subfigure}
+  \label{fig:Graphen}
+  \caption{Graphen am Oszilloskop}
+\end{figure}
+
+In \autoref{fig:Graphen} sind die durch den Tiefpass entstehenden Wellen bei der jeweils angegebenen Phasenverschiebung durch den Phasenverschieber. Diese Graphen entstehen durch das nicht verrauschte Signal.
+Für das verrauschte Signal haben die Graphen jedoch dieselbe Form, mit der Ausnahme, dass diese an der $x$-Achse gespiegelt sind.
+
+Die Messdaten aus \autoref{tab:Phasenverschiebung} wurden zur besseren Einsicht geplottet und es wurde ein sinusförmiger Fit über die Messwerte gelegt.
+Es ist zu bemerken, dass die Werte in der Messung ohne Rauschen ein wenig kleiner waren, als jene der Messung mit Rauschen.
+Die Frequenzen sind annähernd gleich, eben so wie die Phasenverschiebung zwischen $U_\text{const}$ und $U_\text{ref}$. Dies war zu erwarten, da das Rauschen durch den Lock-In-Filter größtenteils herausgefiltert wird.
 
 \begin{figure}
   \centering
@@ -14,6 +78,21 @@
   \caption{Plot und Fit der Daten der Messung der Phasenverschiebung mit Rauschen.}
   \label{fig:plot_phase_rauschen}
 \end{figure}
+
+Die Graphen wurden nach der Form $f(x)=a\cdot sin(b\cdot x+c)$ geplottet. Mithilfe von Python lassen sich die unverrauschten Werte als
+\\ \\
+\centerline{$a=24.7 \pm 0.5$V}
+\centerline{$b=0.018 \pm 3\cdot 10^\text{-7}$}
+\centerline{$c=-0.860 \pm 0.004$}
+\\ \\
+bestimmen. Für die verrauschten Werte ergibt sich:
+\\ \\
+\centerline{$a=29.5 \pm 0.4$V}
+\centerline{$b=0.018 \pm 1.8\cdot 10^\text{-7}$}
+\centerline{$c=-0.849 \pm 0.003$}
+\\ \\
+
+\subsection{Messung von Lichtintensität einer LED und einer Photodiode}
 
 \begin{figure}
   \centering
