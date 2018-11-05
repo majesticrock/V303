@@ -15,17 +15,17 @@ Die Funktionsweise eines Lock-In-Verstärkers soll kennengelernt und überprüft
         U_\text{sig} = U_0 sin(\omega t)
     \end{equation} 
     \begin{equation}
-        U_\text{ref} = \frac {4}{\pi} ($sin$(\omega t) + \frac {1}{3} $sin$(3 \omega t) + ... )
+        U_\text{ref} = \frac {4}{\pi} (\sin (\omega t) + \frac {1}{3} \sin(3 \omega t) + ... )
     \end{equation}
     wobei $U_\text{ref}$ durch ein Rechtecksignal moduliert wird. Das gemischte Signal ergiebt somit
     \begin{equation}
-        U_\text{sig} \times U_\text{ref} = \frac {2}{\pi} U_0 (1- \frac{2}{3} $cos$(2 \omega t) - \frac {2}{15} $cos$(4 \omega t) - ...).
+        U_\text{sig} \times U_\text{ref} = \frac {2}{\pi} U_0 (1- \frac{2}{3} \cos (2 \omega t) - \frac {2}{15} \cos (4 \omega t) - ...).
     \end{equation}
         Das resultierende Signal $U_\text{sig} \times U_\text{ref}$ wird anschließend durch einen Tiefpaß über ein Vielfaches der Periodenlänge
         integriert, was dazu führt, dass die Oberfrequenzen $\omega$ des Mischsignals unterdrückt werden. Das Ausgangssingnal ist dann
         \begin{equation}
         \label{eqn:u_out}
-            U_\text{out} = \frac{2}{\pi} U_0 $cos$(\Phi) .
+            U_\text{out} = \frac{2}{\pi} U_0 \cos (\Phi) .
         \end{equation}
         Indem nun $\Delta \Phi = 0$ gewählt wird, werden das Eingangs- und das Referenzsignal synchronisiert, so dass sich Gleichung \ref{eqn:u_out}
         zu
