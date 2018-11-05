@@ -21,17 +21,17 @@ Die Funktionsweise eines Lock-In-Verstärkers soll kennengelernt und überprüft
     \begin{equation}
         U_\text{sig} \times U_\text{ref} = \frac {2}{\pi} U_0 (1- \frac{2}{3} \cos (2 \omega t) - \frac {2}{15} \cos (4 \omega t) - ...).
     \end{equation}
-        Das resultierende Signal $U_\text{sig} \times U_\text{ref}$ wird anschließend durch einen Tiefpaß über ein Vielfaches der Periodenlänge
-        integriert, was dazu führt, dass die Oberfrequenzen $\omega$ des Mischsignals unterdrückt werden. Das Ausgangssingnal ist dann
-        \begin{equation}
-        \label{eqn:u_out}
-            U_\text{out} = \frac{2}{\pi} U_0 \cos (\Phi) .
-        \end{equation}
-        Indem nun $\Delta \Phi = 0$ gewählt wird, werden das Eingangs- und das Referenzsignal synchronisiert, so dass sich Gleichung \ref{eqn:u_out}
-        zu
-        \begin{equation}
-            U_\text{out} = \frac{2}{\pi} U_0
-        \end{equation}
-        vereinfacht. Der Tiefpassfilter kann dabei eine fast beliebig kleine Bandbreit $\Delta \nu  = \frac{1}{\pi R C}$ haben, da sich die Zeitkonstante $\Tau = R C$ sehr groß wählen lässt.
-        Hierdurch sind Güten mit bis zu $Q = 100000$ möglich.
+    Das resultierende Signal $U_\text{sig} \times U_\text{ref}$ wird anschließend durch einen Tiefpaß über ein Vielfaches der Periodenlänge
+    integriert, was dazu führt, dass die Oberfrequenzen $\omega$ des Mischsignals unterdrückt werden. Das Ausgangssingnal ist dann
+    \begin{equation}
+    \label{eqn:u_out}
+        U_\text{out} = \frac{2}{\pi} U_0 \cos (\Phi) .
+    \end{equation}
+    Indem nun $\Delta \Phi = 0$ gewählt wird, werden das Eingangs- und das Referenzsignal synchronisiert, so dass sich Gleichung \ref{eqn:u_out}
+    zu
+    \begin{equation}
+        U_\text{out} = \frac{2}{\pi} U_0
+    \end{equation}
+    vereinfacht. Der Tiefpassfilter kann dabei eine fast beliebig kleine Bandbreit $\Delta \nu  = \frac{1}{\pi R C}$ haben, da sich die Zeitkonstante $\Tau = R C$ sehr groß wählen lässt.
+    Hierdurch sind Güten mit bis zu $Q = 100000$ möglich.
 \subsection{Photo-Diode}
