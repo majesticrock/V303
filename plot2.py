@@ -30,9 +30,9 @@ for values in werte:
 guess = [25, (1/60), (np.pi/4)]
 
 x_line = np.linspace(0, 180)
-plt.plot(xdata, ydata, "r.", label="Raw Data")
+plt.plot(xdata, ydata, "r.", label="Messwerte")
 popt, pcov = curve_fit(func, xdata, ydata, guess)
-plt.plot(x_line, func(x_line, *popt), "b-", label="Curve Fit")
+plt.plot(x_line, func(x_line, *popt), "b-", label="Fit")
 
 print(popt)
 print(pcov)

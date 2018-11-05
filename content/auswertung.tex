@@ -68,18 +68,18 @@ Die Frequenzen sind annähernd gleich, eben so wie die Phasenverschiebung zwisch
 \begin{figure}
   \centering
   \includegraphics{plot_phase.pdf}
-  \caption{Plot und Fit der Daten der Messung der Phasenverschiebung.}
+  \caption{Plot und Fit der Daten der Messung ohne Rauschen.}
   \label{fig:plot_phase}
 \end{figure}
 
 \begin{figure}
   \centering
   \includegraphics{plot_phase_rauschen.pdf}
-  \caption{Plot und Fit der Daten der Messung der Phasenverschiebung mit Rauschen.}
+  \caption{Plot und Fit der Daten der Messung mit Rauschen.}
   \label{fig:plot_phase_rauschen}
 \end{figure}
 
-Die Graphen wurden nach der Form $f(x)=a\cdot sin(b\cdot x+c)$ geplottet. Mithilfe von Python lassen sich die unverrauschten Werte als
+Die Graphen wurden nach der Form $f(x)=a\cdot cos(b\cdot x+c)$ geplottet. Mithilfe von Python lassen sich die unverrauschten Werte als
 \\ \\
 \centerline{$a=24.7 \pm 0.5$V}
 \centerline{$b=0.018 \pm 3\cdot 10^\text{-7}$}
@@ -87,12 +87,50 @@ Die Graphen wurden nach der Form $f(x)=a\cdot sin(b\cdot x+c)$ geplottet. Mithil
 \\ \\
 bestimmen. Für die verrauschten Werte ergibt sich:
 \\ \\
-\centerline{$a=29.5 \pm 0.4$V}
+\centerline{$a=(29.5 \pm 0.4)$V}
 \centerline{$b=0.018 \pm 1.8\cdot 10^\text{-7}$}
 \centerline{$c=-0.849 \pm 0.003$}
 \\ \\
-
+\pagebreak
 \subsection{Messung von Lichtintensität einer LED und einer Photodiode}
+
+Um diesen Teil korrekt auswerten zu können werden einige Einstellungen am Gerät benötigt:
+
+\begin{table}[!htp]
+  \centering
+  \begin{tabular}{cccc}
+    \toprule
+     & \multicolumn{3}{c}{Vertärkung (Amplifier)} \\
+    Frequenz / Hz & Pre-Amplifier & Lock-In & Tiefpass \\
+    \midrule
+    300 & 100 & 2 & 5 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Im Folgenden wurden die Gesamtverstärkung von 1000 bereits herausgerechnet. Es konnte keine Distanz $r_\text{max}$ bestimmt werden, ab der die Photodiode keine Spannung mehr emittierte. Daher wurde die Messung bis zum durch den Messchieber begrenzten Abstand $r_\text{max}$ von $1.3$m durchgeführt.
+Die Abstrahlung von einer Lichtquelle wie einer LED ist kugelförmig, daraus lässt sich die abgestrahlte Leistung als
+\\ \\
+\centerline{$P = I\cdot 4\pi r^2$.}
+\\ \\
+So lässt sich leicht zeigen, dass für die Intensität $I$
+\\ \\
+\centerline{$I\sim \frac{1}{r^2}$}
+\\ \\
+gilt. Da die gemessene Spannung linear von der Intensität abhängt, gilt außerdem
+\\ \\
+\centerline{$U\sim \frac{1}{r^2}$.}
+\\ \\
+Die Spannung lässt sich ingesamt in Abhängigkeit von $r$ als
+\\ \\
+\centerline{$U(r) = \frac{a}{(r+b)^2} +c$}
+\\ \\
+beschreiben. Die Koeffizienten lassen sich mittels Python bestimmen und sind
+\\ \\
+\centerline{$a=(0.182\pm 0.002)$ \!mV m²}
+\centerline{$b=(0.0656\pm 0.0008)$ \!m}
+\centerline{$c=(-0.080\pm 0.001)$ \!mV}
+\\ \\
 
 \begin{figure}
   \centering
