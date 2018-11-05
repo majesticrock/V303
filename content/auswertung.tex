@@ -53,14 +53,14 @@ Low-Pass-Filter gemessene Spannung. Auffällig ist, dass die errechnte Spannung,
     \caption{$\Delta\phi = 270°$}
     \label{fig:270-deg}
   \end{subfigure}
-  \label{fig:Graphen}
   \caption{Graphen am Oszilloskop}
+  \label{fig: graphen}
 \end{figure}
 
-In \ref{fig:Graphen} sind die durch den Tiefpass entstehenden Wellen bei der jeweils angegebenen Phasenverschiebung durch den Phasenverschieber. Diese Graphen entstehen durch das nicht verrauschte Signal.
+In \autoref{fig: graphen} sind die durch den Tiefpass entstehenden Wellen bei der jeweils angegebenen Phasenverschiebung durch den Phasenverschieber. Diese Graphen entstehen durch das nicht verrauschte Signal.
 Für das verrauschte Signal haben die Graphen jedoch dieselbe Form, mit der Ausnahme, dass diese an der $x$-Achse gespiegelt sind.
 
-Die Messdaten aus \ref{tab:Phasenverschiebung} wurden zur besseren Einsicht geplottet und es wurde ein sinusförmiger Fit über die Messwerte gelegt.
+Die Messdaten aus \autoref{tab: Phasenverschiebung} wurden zur besseren Einsicht geplottet und es wurde ein sinusförmiger Fit über die Messwerte gelegt.
 Es ist zu bemerken, dass die Werte in der Messung ohne Rauschen ein wenig kleiner waren, als jene der Messung mit Rauschen.
 Die Frequenzen sind annähernd gleich, eben so wie die Phasenverschiebung zwischen $U_\text{const}$ und $U_\text{ref}$. Dies war zu erwarten, da das Rauschen durch den Lock-In-Filter größtenteils herausgefiltert wird.
 
@@ -78,7 +78,7 @@ Die Frequenzen sind annähernd gleich, eben so wie die Phasenverschiebung zwisch
   \label{fig:plot_phase_rauschen}
 \end{figure}
 
-Die Graphen wurden nach der Form $f(x)=a\cdot cos(b\cdot x+c)$ geplottet. Mithilfe von Python lassen sich die unverrauschten Werte als
+Die Graphen wurden nach der Form $f(x)=a\cdot \cos(b\cdot x+c)$ geplottet. Mithilfe von Python lassen sich die unverrauschten Werte als
 \\ \\
 \centerline{$a=24.7 \pm 0.5$V}
 \centerline{$b=0.018 \pm 3\cdot 10^\text{-7}$}
