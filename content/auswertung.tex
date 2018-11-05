@@ -5,7 +5,6 @@
 Zunächst wurde die konstate Spannung des Funktionsgenerators gemessen. Diese wird von dem Oscillator-Ausgang bereitgestellt und beträgt $U_\text{const} = 3.2$V\!. Der Reference-Ausgang liefert eine variable Spannungsamplitude $U_\text{ref}$.
 Die Frequenzen sind jeweils einstellbar.
 
-Entgegen der Erwartung ändert sich beim Ändern der Phase mithilfe des Phasenverschiebers (Phase Shifter) auch die am Oscillator-Ausgang gemessene Spannung.
 %Gleichungsreferenz hinzufügen
 Die Phasenverschiebung der beiden Signale lässt sich mithilfe von Python auf circa 45° bestimmen. Mit dieser Information und GLEICHUNG! (5) lässt sich nun auch $U_\text{out}$ berechnen.
 Diese beiden sind in den foglenden beiden Messwerttabellen gegeneinander aufgeführt.
@@ -13,7 +12,7 @@ Diese beiden sind in den foglenden beiden Messwerttabellen gegeneinander aufgef�
 \input{../content/tabelle1.tex}
 
 $\Delta\phi$ beschreibt hier bei die am Phasenverschieber eingestellte Phasenverschiebung zwischen dem Oscillator- und dem Reference-Signal und $U_\text{low}$ beschreibt die am
-Low-Pass-Filter gemessene Spannung.
+Low-Pass-Filter gemessene Spannung. Auffällig ist, dass die errechnte Spannung, um eine Größenordnung abweicht. Dies geht vermutlich auf ein fehlerhaftes Ablesen der Messskala zurück. Diese Abweichung wird im Weiteren nicht beachtet, da die Kurvenform lediglich in der Amplitude abweicht und nicht in Frequenz oder Phasenverschiebung.
 
 \begin{figure}
   \centering
@@ -58,10 +57,10 @@ Low-Pass-Filter gemessene Spannung.
   \caption{Graphen am Oszilloskop}
 \end{figure}
 
-In \autoref{fig:Graphen} sind die durch den Tiefpass entstehenden Wellen bei der jeweils angegebenen Phasenverschiebung durch den Phasenverschieber. Diese Graphen entstehen durch das nicht verrauschte Signal.
+In \ref{fig:Graphen} sind die durch den Tiefpass entstehenden Wellen bei der jeweils angegebenen Phasenverschiebung durch den Phasenverschieber. Diese Graphen entstehen durch das nicht verrauschte Signal.
 Für das verrauschte Signal haben die Graphen jedoch dieselbe Form, mit der Ausnahme, dass diese an der $x$-Achse gespiegelt sind.
 
-Die Messdaten aus \autoref{tab:Phasenverschiebung} wurden zur besseren Einsicht geplottet und es wurde ein sinusförmiger Fit über die Messwerte gelegt.
+Die Messdaten aus \ref{tab:Phasenverschiebung} wurden zur besseren Einsicht geplottet und es wurde ein sinusförmiger Fit über die Messwerte gelegt.
 Es ist zu bemerken, dass die Werte in der Messung ohne Rauschen ein wenig kleiner waren, als jene der Messung mit Rauschen.
 Die Frequenzen sind annähernd gleich, eben so wie die Phasenverschiebung zwischen $U_\text{const}$ und $U_\text{ref}$. Dies war zu erwarten, da das Rauschen durch den Lock-In-Filter größtenteils herausgefiltert wird.
 
@@ -91,7 +90,6 @@ bestimmen. Für die verrauschten Werte ergibt sich:
 \centerline{$b=0.018 \pm 1.8\cdot 10^\text{-7}$}
 \centerline{$c=-0.849 \pm 0.003$}
 \\ \\
-\pagebreak
 \subsection{Messung von Lichtintensität einer LED und einer Photodiode}
 
 Um diesen Teil korrekt auswerten zu können werden einige Einstellungen am Gerät benötigt:

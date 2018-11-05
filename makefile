@@ -9,7 +9,7 @@ build/plot_phase_rauschen.pdf: plot2.py phasenverschiebung.csv header-matplotlib
 build/plot_intensity.pdf: plot3.py photo.csv header-matplotlib.tex | build
 	TEXINPUTS=$$(pwd): python plot3.py
 
-build/main.pdf: build/plot_phase.pdf build/plot_phase_rauschen.pdf build/plot_intensity.pdf content/tabelle1.tex
+build/main.pdf: build/plot_phase.pdf build/plot_phase_rauschen.pdf build/plot_intensity.pdf content/tabelle1.tex content/tabelle2.tex lit.bib
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS=build: \
