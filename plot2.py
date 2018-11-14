@@ -10,8 +10,8 @@ def csv_read(pathToFile, delimiter=";"):
             content.append((line.rstrip()).split(delimiter))
     return content
 
-def func(x, a, b, c):
-    return a*np.cos(b*x + c)
+def func(x, a, b):
+    return a*np.cos(x + b)
 
 werte = csv_read("phasenverschiebung.csv")
 xdata = np.zeros(13)
@@ -23,13 +23,13 @@ for values in werte:
     if(ignore):
         ignore = False
     else:
-        xdata[i] = float(values[0])
+        xdata[i] = float(values[0]) * (np.pi/180)
         ydata[i] = float(values[2])
         i+=1
 
-guess = [25, (1/60), (np.pi/4)]
+guess = [25, (np.pi/4)]
 
-x_line = np.linspace(0, 180)
+x_line = np.linspace(0, np.pi)
 plt.plot(xdata, ydata, "r.", label="Messwerte")
 popt, pcov = curve_fit(func, xdata, ydata, guess)
 plt.plot(x_line, func(x_line, *popt), "b-", label="Fit")
@@ -37,7 +37,7 @@ plt.plot(x_line, func(x_line, *popt), "b-", label="Fit")
 print(popt)
 print(pcov)
 
-plt.xlabel(r"Phasenverschiebung $\Delta\phi$ / deg")
+plt.xlabel(r"Phasenverschiebung $\Delta\phi$ / rad")
 plt.ylabel(r"Amplitude $U$ / V")
 plt.legend()
 plt.tight_layout()

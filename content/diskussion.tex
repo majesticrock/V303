@@ -1,21 +1,30 @@
 \section{Diskussion}
 \label{sec:Diskussion}
-Im Auswertungsteil wurde bereits auf eine Abweichung der Messwerte für $U_\text{low}$ zu $U_\text{out}$ hingewiesen.
-Des weiteren war es schwierig den in der Anleitung geforderten Wert von 10mV für $U_\text{ref}$ einzustellen, daher wird dieser Wert mit einem relativ großen Fehler behaftet sein.
+Im Auswertungsteil wird bereits auf eine Abweichung der Messwerte für $U_\text{low}$ zu $U_\text{out}$ hingewiesen.
+Des Weiteren ist es schwierig den in der Anleitung geforderten Wert von 10mV für $U_\text{ref}$ einzustellen, daher wird dieser Wert mit einem relativ großen Fehler behaftet sein.
 
-Bedingt durch die Größe des Phasenverschiebers am Gerät, war eine exakte Einstellung der Winkel nicht möglich, weshalb die Werte für $\Delta\phi$ nicht genau sein können.
+Bedingt durch die Größe des Phasenverschiebers am Gerät, ist eine exakte Einstellung der Winkel nicht möglich, weshalb die Werte für $\Delta\phi$ nicht genau sein können.
 Das beudet des Weiteren, dass die jeweiligen $\Delta\phi$ in der Messung mit verrauschten Signal ein wenig anders sein können, als in der Messung mit unverrauschtem Signal.
 Dennoch sind die Kurven beider Signale sehr ähnlich, weshalb dieser Fehler als eher klein eingeordnet werden kann.
 
-Eine vermutlich größere Fehlerquelle ist die analoge Skala am Low-Pass-Filter an dem die Werte für $U_\text{low}$ abgelesen wurden. Die Skala ist einerseits sehr klein, was ein Ablesen mit bloßem Auge deutlich erschwert,
-andererseits gibt es keine Möglichkeit die Skala einzustellen beziehungsweise zu verändern, sodass für unterschiedliche Größenordnungen dieselbe Skala verwendet werden muss. Besagter Fehler wurde in den Rechnung nicht näher betrachtet.
+Die Frequenzen sind annähernd gleich, eben so wie die Phasenverschiebung zwischen $U_\text{const}$ und $U_\text{ref}$. Dies ist zu erwarten, da das Rauschen durch den Lock-In-Filter größtenteils herausgefiltert wird.
 
-Die Messwerte, die mithilfe des Oszilloskop gemessen wurden, sind vergleichsweise als eher genau einzustufen, da sich diese gut einstellen ließ und mit der Cursor-Funktion konnte eine Amplitude gut abgelesen werden.
-Die Abbildungen auf dem Bildschirm des Oszilloskops kamen schnell zum stehen und flackerten wenig bis gar nicht.
+Eine vermutlich größere Fehlerquelle ist die analoge Skala am Low-Pass-Filter an dem die Werte für $U_\text{low}$ abgelesen wurden. Die Skala ist einerseits sehr klein, was ein Ablesen mit bloßem Auge deutlich erschwert,
+andererseits gibt es keine Möglichkeit die Skala einzustellen beziehungsweise zu verändern, sodass für unterschiedliche Größenordnungen dieselbe Skala verwendet werden muss. Besagter Fehler wird in der Rechnung nicht näher betrachtet.
+
+Auffällig ist, dass die errechnte Spannung bei den Messungen bezüglich der Phasenverschiebung, um eine Größenordnung abweicht. Dies geht vermutlich auf ein fehlerhaftes Ablesen der Messskala zurück. Diese Abweichung wird in der Auswertung nicht beachtet, da die Kurvenform lediglich in der Amplitude abweicht und nicht in Frequenz oder Phasenverschiebung.
+
+Es ist zu bemerken, dass die Werte in der Messung ohne Rauschen ein wenig kleiner sind, als jene der Messung mit Rauschen. Dies liegt vermutlich an der hinzugefügten Referenzspannung, die, obwohl sie klein ist, dennoch ein gewissen Beitrag liefert.
+
+Die Messwerte, die mithilfe des Oszilloskop gemessen wwrden, sind vergleichsweise als eher genau einzustufen, da sich diese gut einstellen lassen und mit der Cursor-Funktion kann eine Amplitude gut abgelesen werden.
+Die Abbildungen auf dem Bildschirm des Oszilloskops kommen schnell zum stehen und flackern wenig bis gar nicht.
 \\ \\
-Im zweiten Versuchsteil fällt wie bereits in der Auswertung erwähnt auf, dass es nicht möglich war ein $r_\text{max}$ zu bestimmen, ab dem kein Signal mehr an der Photodiode zu erkennen war.
+Im zweiten Versuchsteil fällt wie bereits in der Auswertung erwähnt auf, dass es nicht möglich ist ein $r_\text{max}$ zu bestimmen, ab dem kein Signal mehr an der Photodiode zu erkennen ist.
 Jedoch gibt es von 1,1m Abstand auf 1,2m Abstand einen vergleichsweiße großen Sprung in der Spannung, der nicht in das restliche Schema passt.
-FÜr 1,2m auf 1,3m verhällt sich dies allerdings weiterhin erwartungsgemäß. Eine Weitere Untersuchung auf eine größere Distanz war bedingt durch die Länge der Schiebeleiste nicht möglich.
-Eventuell war das Licht der LED ab dieser Stelle so schwach, dass es allein nicht ausgereicht hätte, damit die Photodiode ein Signal ausstößt, allerdings zusammen mit anderem Licht in dem Raum könnte die Intensität groß genug gewesen sein, dass dennoch ein Signal gesendet wurde.
-Ein Überpürfen desse war nicht möglich, da sich in dem Raum auch andere Menschen aufgehalten haben, die Licht benötigten.
+Für 1,2m auf 1,3m verhällt sich dies allerdings weiterhin erwartungsgemäß. Eine weitere Untersuchung auf eine größere Distanz ist bedingt durch die Länge der Schiebeleiste nicht möglich.
+Eventuell ist das Licht der LED ab dieser Stelle so schwach, dass es allein nicht ausreicht, damit die Photodiode ein Signal ausstößt, allerdings zusammen mit anderem Licht in dem Raum könnte die Intensität groß genug sein, dass dennoch ein Signal gesendet wird.
+Ein Überpürfen desse ist nicht möglich, da sich in dem Raum auch andere Menschen aufgehalten haben, die Licht benötigten.
 Allerdings wäre dadurch der Werte von $c$ in der Ausgleichsrechnung von dieser Messung erklärt.
+
+Die errechnete Steigung der Ausgleichsgerade für die logarithmierten Werte beträgt nur $a \approx 1.89$. Erwartet wird eine Steigung von $a = 2$, da die Intensität und damit die Spannung mit $\frac{1}{r^2}$ abfallen sollte.
+Die Abweichung geht vermutlich auf die oben genannten Messungenauigkeiten zurück und ist im Gesamten so gering, dass davon ausgegangen werden kann, dass die korrekte Steigung tatsächlich $a = 2$ beträgt. 
